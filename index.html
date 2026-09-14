@@ -66,9 +66,8 @@
     position:relative;
     z-index:1;
   }
-  .logo-row{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:1.25rem;margin:0 auto;}
-  .hero-logo{width:min(280px,70vw);height:auto;margin:0 auto;}
-  .partner-logo{width:min(190px,48vw);height:auto;margin:0 auto;}
+  .hero-logo{width:min(340px,88vw);height:auto;margin:0 auto;}
+  .partner-logo{width:min(180px,50vw);height:auto;align-self:center;}
   .brand-row{display:flex;align-items:center;gap:.75rem;justify-content:center;}
   .brand-row .brand-name{font-family:"Frank Ruhl Libre",serif;font-size:1.05rem;color:var(--plum);font-weight:600;}
   .cycle-pill{
@@ -365,8 +364,8 @@
   @media (min-width:768px){
     section{padding-block:4.5rem;}
     .hero{padding-block-start:3.5rem;padding-block-end:4.5rem;}
-    .hero-logo{width:300px;}
-    .partner-logo{width:220px;}
+    .hero-logo{width:380px;}
+    .partner-logo{width:200px;}
     .principles{grid-template-columns:1fr 1fr;}
     .tracks{grid-template-columns:1fr 1fr;}
     .founder-grid{flex-direction:row;}
@@ -382,10 +381,7 @@
 
   <header class="hero">
     <div class="wrap">
-      <div class="logo-row">
-        <img id="hero-logo" class="hero-logo" alt="חממות יצירה — הבעה, ריפוי, קהילה" src="images/logo.png" />
-        <img class="partner-logo" alt="מרכז חוסן אשכול" src="images/eshkol-logo.png" />
-      </div>
+      <img id="hero-logo" class="hero-logo" alt="חממות יצירה — הבעה, ריפוי, קהילה" src="images/logo.png" />
       <span class="cycle-pill">🌱 נפתח עכשיו <b>מחזור שלישי</b> במועצה אזורית אשכול</span>
       <div class="quick-tracks">
         <a class="quick-track-btn" href="#track-video">🎬 חממת מסע קולנוע תיעודי</a>
@@ -524,6 +520,7 @@
           <h3 style="font-size:1.2rem;">מרכז חוסן אשכול</h3>
           <p>חממות יצירה פועלות בשיתוף מרכז חוסן אשכול והעמותה לקידום תושבי חבל אשכול — כחלק ממארג התמיכה הקהילתית לתושבי האזור.</p>
         </div>
+        <img class="partner-logo" alt="מרכז חוסן אשכול" src="images/eshkol-logo.png" />
       </div>
     </div>
   </section>

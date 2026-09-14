@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>חממות יצירה — מחזור 3</title>
+<meta name="description" content="עמוד הרשמה למחזור השלישי של חממות יצירה, בשיתוף מרכז חוסן אשכול">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;600;700&family=Heebo:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --cream:#FFFBF8;
+    --cream-2:#FCEEE3;
+    --surface:#FFFFFF;
+    --ink:#4A3B45;
+    --plum:#5B4A66;
+    --plum-soft:#8D7C93;
+    --coral:#E9A98A;
+    --coral-deep:#D98F6E;
+    --peach:#F8DCC4;
+    --pink:#F5D6DC;
+    --mint:#D8ECE3;
+    --teal:#B7D9D0;
+    --border:rgba(91,74,102,0.12);
+    --shadow:0 16px 32px -22px rgba(91,74,102,0.22);
+  }
+  *{box-sizing:border-box;}
+  html{color-scheme:light;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:"Heebo","Segoe UI",Arial,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{
+    font-family:"Frank Ruhl Libre",Georgia,"Times New Roman",serif;
+    color:var(--plum);
+    text-wrap:balance;
+    font-weight:600;
+    margin:0;
+  }
+  a{color:var(--coral-deep);}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1040px;margin:0 auto;padding-inline:1.25rem;}
+  section{padding-block:3.25rem;}
+
+  /* ---------- decorative organic divider ---------- */
+  .divider{line-height:0;margin-block:-1px;}
+  .divider svg{width:100%;height:auto;display:block;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:linear-gradient(180deg,#FFFFFF 0px,#FFFFFF 460px,var(--cream) 560px,var(--cream-2) 100%);
+    padding-block-start:2.75rem;
+    padding-block-end:3.5rem;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:1.5rem;
+    position:relative;
+    z-index:1;
+  }
+  .hero-logo{width:min(340px,88vw);height:auto;margin:0 auto;}
+  .brand-row{display:flex;align-items:center;gap:.75rem;justify-content:center;}
+  .brand-row .brand-name{font-family:"Frank Ruhl Libre",serif;font-size:1.05rem;color:var(--plum);font-weight:600;}
+  .cycle-pill{
+    display:inline-flex;align-items:center;gap:.4rem;
+    background:var(--surface);border:1px solid var(--border);
+    border-radius:999px;padding:.35rem .9rem;
+    font-size:.8rem;color:var(--plum-soft);width:fit-content;
+    margin-inline:auto;
+  }
+  .cycle-pill b{color:var(--coral-deep);}
+  .quick-tracks{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;}
+  .quick-track-btn{
+    display:inline-flex;align-items:center;gap:.4rem;
+    background:var(--surface);border:1px solid var(--border);
+    border-radius:999px;padding:.5rem 1.1rem;
+    font-size:.85rem;font-weight:700;color:var(--plum);
+    text-decoration:none;
+  }
+  .hero h1{
+    font-size:clamp(2.1rem,7vw,3.4rem);
+    line-height:1.14;
+  }
+  .tagline{
+    font-size:clamp(1rem,3vw,1.2rem);
+    color:var(--coral-deep);
+    letter-spacing:.02em;
+    font-weight:600;
+  }
+  .lede{
+    font-size:1.05rem;
+    color:var(--plum-soft);
+    max-width:42rem;
+    margin-inline:auto;
+  }
+  .facts-strip{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;
+    padding:0;margin:0;list-style:none;
+  }
+  .facts-strip li{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:.55rem .85rem;
+    font-size:.88rem;
+    color:var(--ink);
+    display:flex;align-items:center;gap:.4rem;
+    box-shadow:var(--shadow);
+  }
+  .facts-strip li strong{color:var(--plum);}
+  .cta-row{display:flex;flex-wrap:wrap;justify-content:center;gap:.85rem;align-items:center;margin-top:.25rem;}
+  .btn{
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:var(--coral-deep);
+    color:#fff;
+    padding:.85rem 1.5rem;
+    border-radius:14px;
+    font-weight:700;
+    font-size:1rem;
+    text-decoration:none;
+    box-shadow:0 14px 28px -18px rgba(217,143,110,0.65);
+  }
+  .btn.ghost{
+    background:transparent;
+    color:var(--plum);
+    border:1.5px solid var(--border);
+    box-shadow:none;
+  }
+
+  /* ---------- mission ---------- */
+  .mission{background:var(--surface);}
+  .eyebrow{
+    font-size:.78rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--teal);
+    font-weight:700;
+    margin-block-end:.6rem;
+  }
+  .mission h2{font-size:clamp(1.6rem,4vw,2.2rem);margin-block-end:1rem;}
+  .mission p{max-width:38rem;color:var(--ink);font-size:1.02rem;}
+  .principles{
+    margin-top:2rem;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1rem;
+  }
+  .principle{
+    display:flex;gap:.85rem;
+    padding:1rem;
+    border-radius:14px;
+    background:var(--cream);
+    border:1px solid var(--border);
+  }
+  .principle .dot{
+    flex:none;width:10px;height:10px;border-radius:50%;margin-top:.5rem;
+  }
+  .principle h3{font-size:1.02rem;font-family:"Heebo",sans-serif;font-weight:700;color:var(--plum);}
+  .principle p{margin:.25rem 0 0;font-size:.94rem;color:var(--plum-soft);}
+
+  /* ---------- program / season timeline ---------- */
+  .season{background:var(--cream-2);}
+  .season h2{font-size:clamp(1.6rem,4vw,2.2rem);margin-block-end:.5rem;}
+  .season .eyebrow{color:var(--coral-deep);}
+  .timeline{
+    display:flex;flex-wrap:wrap;gap:.3rem;
+    margin:1.5rem 0 1.75rem;
+    padding:0;list-style:none;
+  }
+  .timeline li{
+    width:16px;height:16px;border-radius:50%;
+    background:var(--peach);
+    border:1px solid var(--border);
+  }
+  .timeline li:nth-child(4n+2){background:var(--pink);}
+  .timeline li:nth-child(4n+3){background:var(--mint);}
+  .timeline li:nth-child(4n){background:var(--teal);}
+  .timeline-caption{font-size:.85rem;color:var(--plum-soft);margin-top:-1.25rem;margin-bottom:2rem;}
+  .tracks{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1.25rem;
+  }
+  .track-card{
+    display:flex;
+    flex-direction:column;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:1.5rem;
+    box-shadow:var(--shadow);
+  }
+  .track-card .track-label{
+    font-size:.75rem;font-weight:700;letter-spacing:.08em;
+    color:var(--plum);background:var(--mint);
+    display:inline-block;padding:.25rem .65rem;border-radius:999px;
+    margin-bottom:.85rem;
+  }
+  .track-card.alt .track-label{background:var(--pink);}
+  .track-card h3{font-family:"Frank Ruhl Libre",serif;font-size:1.35rem;color:var(--plum);margin-bottom:.35rem;}
+  .facilitator{
+    display:flex;align-items:center;gap:.75rem;
+    margin-top:auto;
+    padding-top:1rem;
+    border-top:1px dashed var(--border);
+  }
+  .avatar{
+    flex:none;width:54px;height:54px;border-radius:50%;
+    background:linear-gradient(135deg,var(--peach),var(--mint));
+    display:flex;align-items:center;justify-content:center;
+    color:var(--plum);font-family:"Frank Ruhl Libre",serif;font-weight:700;font-size:1.1rem;
+    border:1px solid var(--border);
+    overflow:hidden;
+  }
+  .avatar img{width:100%;height:100%;object-fit:cover;}
+  .facilitator .fname{font-weight:700;color:var(--plum);}
+  .facilitator .fpending{font-size:.82rem;color:var(--plum-soft);}
+  .journey-strip{
+    margin-top:2rem;
+    font-size:.9rem;
+    color:var(--plum-soft);
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:.9rem 1.1rem;
+  }
+
+  /* ---------- meet founder ---------- */
+  .founder{background:var(--surface);}
+  .founder-grid{
+    display:flex;flex-direction:column;gap:1.5rem;
+  }
+  .founder-card{
+    display:flex;gap:1rem;align-items:flex-start;
+    background:var(--cream);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:1.25rem;
+  }
+  .founder-card .avatar{width:64px;height:64px;font-size:1.3rem;}
+  .founder-card h3{font-family:"Frank Ruhl Libre",serif;font-size:1.2rem;color:var(--plum);}
+  .founder-card p{font-size:.92rem;color:var(--plum-soft);margin:.4rem 0 0;}
+  .project-highlight{
+    margin-top:.9rem;
+    font-size:.88rem;
+    color:var(--plum-soft);
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:.7rem .9rem;
+  }
+  .project-highlight strong{color:var(--plum);}
+
+  /* ---------- testimonials ---------- */
+  .voices{background:var(--cream-2);}
+  .voices h2{font-size:clamp(1.6rem,4vw,2.2rem);margin-block-end:1.75rem;}
+  .quote-grid{
+    display:grid;grid-template-columns:1fr;gap:1.25rem;
+  }
+  blockquote{
+    margin:0;
+    background:var(--surface);
+    border-radius:18px;
+    padding:1.4rem;
+    border:1px solid var(--border);
+    box-shadow:var(--shadow);
+  }
+  blockquote p{
+    font-family:"Frank Ruhl Libre",serif;
+    font-size:1.08rem;
+    color:var(--ink);
+    margin:0;
+    line-height:1.6;
+  }
+  blockquote cite{
+    display:block;margin-top:.85rem;
+    font-style:normal;font-size:.85rem;color:var(--coral-deep);font-weight:700;
+  }
+  .video-note{
+    margin-top:1.5rem;
+    display:flex;align-items:center;gap:.6rem;
+    font-size:.92rem;
+  }
+  .video-note a{font-weight:700;}
+
+  /* ---------- partner ---------- */
+  .partner{background:var(--surface);}
+  .partner-inner{
+    display:flex;flex-direction:column;gap:1rem;
+    background:var(--cream);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:1.75rem;
+  }
+  .partner-inner p{color:var(--plum-soft);font-size:.96rem;max-width:34rem;}
+
+  /* ---------- CTA ---------- */
+  .cta{
+    background:linear-gradient(180deg,var(--cream-2) 0%,var(--peach) 100%);
+    color:var(--plum);
+    text-align:center;
+  }
+  .cta h2{color:var(--plum);font-size:clamp(1.6rem,4vw,2.2rem);}
+  .cta p{color:var(--plum-soft);max-width:32rem;margin:.75rem auto 1.75rem;font-size:1rem;}
+  .cta .note{
+    margin-top:1.25rem;font-size:.78rem;color:var(--plum-soft);
+    max-width:28rem;margin-inline:auto;
+  }
+
+  /* ---------- registration dialog ---------- */
+  dialog.reg-dialog{
+    border:none;border-radius:20px;padding:0;
+    max-width:480px;width:92vw;margin:auto;
+    background:var(--surface);color:var(--ink);
+    box-shadow:var(--shadow);
+  }
+  dialog.reg-dialog::backdrop{background:rgba(20,14,24,0.55);backdrop-filter:blur(2px);}
+  .reg-dialog-inner{position:relative;padding:1.6rem;display:flex;flex-direction:column;gap:1rem;}
+  .reg-close{
+    position:absolute;top:.9rem;inset-inline-start:.9rem;
+    background:none;border:none;font-size:1.4rem;line-height:1;
+    color:var(--plum-soft);cursor:pointer;padding:.2rem;
+  }
+  .reg-dialog h3{font-family:"Frank Ruhl Libre",serif;font-size:1.3rem;padding-inline-end:1.5rem;}
+  .reg-dialog .sub{font-size:.88rem;color:var(--plum-soft);margin-top:-.5rem;}
+  .field label{display:block;font-size:.85rem;font-weight:700;color:var(--plum);margin-bottom:.35rem;}
+  .field input[type="text"],
+  .field input[type="tel"],
+  .field input[type="email"],
+  .field textarea{
+    width:100%;border:1px solid var(--border);border-radius:10px;
+    padding:.65rem .8rem;font:inherit;background:var(--cream);color:var(--ink);
+  }
+  .field textarea{min-height:64px;resize:vertical;}
+  .track-options{display:flex;flex-direction:column;gap:.5rem;}
+  .track-option{
+    display:flex;align-items:center;gap:.6rem;
+    border:1px solid var(--border);border-radius:12px;
+    padding:.6rem .75rem;cursor:pointer;font-size:.92rem;
+  }
+  .track-option input{accent-color:var(--coral);width:16px;height:16px;flex:none;}
+  .reg-actions{display:flex;flex-direction:column;gap:.6rem;margin-top:.25rem;}
+  .reg-actions .btn{justify-content:center;width:100%;border:none;cursor:pointer;font:inherit;}
+  .reg-privacy{font-size:.76rem;color:var(--plum-soft);text-align:center;margin:0;}
+
+  /* ---------- footer ---------- */
+  footer{
+    padding-block:2rem;
+    text-align:center;
+    font-size:.82rem;
+    color:var(--plum-soft);
+  }
+  footer .brand-row{justify-content:center;margin-bottom:.6rem;}
+
+  @media (min-width:768px){
+    section{padding-block:4.5rem;}
+    .hero{padding-block-start:3.5rem;padding-block-end:4.5rem;}
+    .hero-logo{width:380px;}
+    .principles{grid-template-columns:1fr 1fr;}
+    .tracks{grid-template-columns:1fr 1fr;}
+    .founder-grid{flex-direction:row;}
+    .quote-grid{grid-template-columns:1fr 1fr;}
+    .quote-grid blockquote:first-child{grid-column:1 / -1;}
+    .partner-inner{flex-direction:row;align-items:center;justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<div dir="rtl" lang="he">
+
+  <header class="hero">
+    <div class="wrap">
+      <img id="hero-logo" class="hero-logo" alt="חממות יצירה — הבעה, ריפוי, קהילה" src="images/logo.png" />
+      <span class="cycle-pill">🌱 נפתח עכשיו <b>מחזור שלישי</b> במועצה אזורית אשכול</span>
+      <div class="quick-tracks">
+        <a class="quick-track-btn" href="#track-video">🎬 חממת מסע קולנוע תיעודי</a>
+        <a class="quick-track-btn" href="#track-crafts">🧺 חממת מלאכות מסורתיות</a>
+      </div>
+      <h1>מרחב יצירה שבועי<br>ליצור, להיפגש ולגלות ביחד</h1>
+      <p class="lede">קבוצות אינטימיות בהן נתנסה בתהליכי יצירה בליווי אמנים מקצועיים — מרחב בטוח לפגוש בלי מילים.</p>
+      <ul class="facts-strip">
+        <li>🗓️ <strong>16</strong> מפגשים</li>
+        <li>📍 מרכז יובלי הבשור</li>
+        <li>🕕 שלישי, <strong>18:00–19:30</strong></li>
+        <li>🚀 יוצא לדרך <strong>6.10</strong></li>
+        <li>💳 <strong>280 ₪</strong> ל-16 מפגשים</li>
+      </ul>
+      <div class="cta-row">
+        <button type="button" class="btn" data-open-reg>להצטרפות למחזור השלישי</button>
+        <a class="btn ghost" href="#tracks">להכיר את הקבוצות ↓</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,32 C240,60 480,4 720,24 C960,44 1200,10 1440,30 L1440,60 L0,60 Z" fill="var(--surface)"/></svg>
+  </div>
+
+  <section class="mission">
+    <div class="wrap">
+      <p class="eyebrow">למה חממות יצירה</p>
+      <h2>מקום ליצור את מה שקשה לומר במילים</h2>
+      <p>התכנית נולדה כדי לתת מענה נפשי ורגשי לתושבי אשכול שהתמודדו עם טראומה ממושכת, עקירה מהבית וניתוק משגרת החיים. דרך תהליכי יצירה קבוצתיים — עבודת מלאכה בחומר וביד, צילום ותיעוד אישי, ולעיתים גם כתיבה ותנועה — נפתח מרחב לעבד את החוויה, לבטא את מה שאין לו מילים, ולבנות מחדש תחושת שייכות וקהילה.</p>
+      <p>זו לא סדנת אמנות ולא טיפול פסיכולוגי בשיחה. זה מרחב באמצע — מונחה על ידי אמנים מקצועיים, מלווה מקצועית על ידי פסיכולוג קליני, ובנוי כך שאפשר לקחת בו חלק בלי להרגיש "בטיפול" ובלי לדבר על הכאב ישירות אם לא רוצים.</p>
+      <div class="principles">
+        <div class="principle"><span class="dot" style="background:var(--peach)"></span><div><h3>מרחב בטוח, לא טיפולי</h3><p>בלי הגדרה של "מטופל". רק מרחב חופשי ליצור בו.</p></div></div>
+        <div class="principle"><span class="dot" style="background:var(--pink)"></span><div><h3>יצירה כעיבוד רגשי</h3><p>לעבוד עם החומר בידיים, לתעד דרך המצלמה — ולפעמים גם לכתוב או לזוז — כל דרך שמבטאת את מה שקשה במילים.</p></div></div>
+        <div class="principle"><span class="dot" style="background:var(--mint)"></span><div><h3>מחויבות קבועה כעוגן</h3><p>מפגש שבועי קבוע — נקודת יציבות בתוך אי־ודאות.</p></div></div>
+        <div class="principle"><span class="dot" style="background:var(--teal)"></span><div><h3>אירוע יצירתי מסכם</h3><p>התוצרים מקבלים נוכחות ונראות — רגע של הכרה משותפת.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,30 C240,6 480,52 720,30 C960,8 1200,46 1440,26 L1440,60 L0,60 Z" fill="var(--cream-2)"/></svg>
+  </div>
+
+  <section class="season" id="tracks">
+    <div class="wrap">
+      <p class="eyebrow">מחזור 3 · 2026–2027</p>
+      <h2>16 מפגשים, שתי חממות</h2>
+      <ul class="timeline" aria-hidden="true">
+        <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+        <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+      </ul>
+      <p class="timeline-caption">6.10.26 ⟵ עונה של 16 מפגשים שבועיים ⟶ 26.1.27 (אפשרות הארכה ל־20 מפגשים)</p>
+      <p class="journey-strip" style="margin-top:0;margin-bottom:2rem;">💳 <strong>עלות ההשתתפות: 280 ₪ ל-16 המפגשים.</strong> ההרשמה מהווה התחייבות להגעה רציפה לכל המפגשים. לאחר אישור ההרשמה יישלח קישור להסדרת התשלום, שישמור את המקום בקבוצה.</p>
+
+      <div class="tracks">
+        <div class="track-card" id="track-video">
+          <span class="track-label">מסע קולנוע תיעודי · iDoco</span>
+          <h3>כשהלב ממלא את הפריים</h3>
+          <p>שמי מיכה אמיתי, יוצר קולנוע דוקומנטרי ומנחה מסעות יצירה אישיים בסדנאות iDoco.</p>
+          <p>מרחב היצירה של מסע ה-iDoco האישי מתקיים במסגרת קבוצתית משתפת ותומכת. במהלך המסע נחפש דרכים להפנות את "עדשת המצלמה" לעולם הפנימי האישי תוך שילוב צילום, פסקול, טקסטים ושימוש באלמנטים נוספים מעולם המבע הקולנועי אותם נלמד.</p>
+          <p>❗ לטובת הסדנה נדרשת יכולת טכנית בסיסית של צילום בטלפון הסלולרי האישי וכן יכולת לימוד של אפליקציית עריכה פשוטה בסלולרי. את עקרונות הצילום והעריכה הבסיסיים נלמד במפגשי הסדנה על מנת לאפשר לכם ליצור באופן עצמאי סרטונים שיוצגו במפגש השבועי.</p>
+          <p>תוצר הסדנה יהיה <strong>"יומן מסע אישי"</strong> — סרט אישי קצר המורכב מקטעי הצילום שיווצרו במהלך הסדנה, בדגש על הביטוי של התהליך האישי שתעברו במסע המשותף.</p>
+          <p>מצפה להיפגש ולהיות חלק מהתהליך שיאפשר ללב שלכם למלא את הפריים במסע האישי והקבוצתי.</p>
+          <div class="facilitator">
+            <div class="avatar"><img src="images/micha.jpg" alt="מיכה אמיתי" /></div>
+            <div><div class="fname">מיכה אמיתי</div><div class="fpending">יוצר קולנוע דוקומנטרי</div></div>
+          </div>
+        </div>
+        <div class="track-card alt" id="track-crafts">
+          <span class="track-label">מלאכות מסורתיות · פרי כפיים</span>
+          <h3>מלאכות מסורתיות</h3>
+          <p>מתרגשת להתחבר אל מיזם חממות באשכול ולפתוח קבוצת מלאכה מסורתית. שמי מיכל מרקס, אני יוצרת, חוקרת, חיה ונושמת מלאכה ואמנות ואת החיבור שלה לחיים שלנו כאן בהקשרים התפתחותיים והוליסטיים, ובעלת הסטודיו <strong>פרי כפיים</strong> למלאכה מסורתית מחברת 🪢.</p>
+          <p>♡ מחכה להיפגש איתכן ואיתכם, לזמן משותף שבו ניצור ונפגוש את עצמנו דרך המלאכה — החומרים, טכניקות המלאכה השונות, האיכויות שכל חומר ומלאכה מביאים איתם מאפשרים ומזמינים אותנו לחוות מפגשים עם חלקים בתוכנו שאולי לא הכרנו, ומבקשים הכרה וממלאים בתוכנו צרכים אנושיים כה מהותיים כמו מסוגלות, יצירה ויצירתיות, למידה והתחדשות — וכל זה יחד בתוך מרחב של קבוצת אנשים תומכת ומיטיבה.</p>
+          <p>♡ נפגוש מלאכות כמו ליבוד, קליעה, אריגה ועוד, בתכנית שמתפרסת על פני 16 מפגשים שבועיים, בימי שלישי בין השעות 18:00–19:30. במפגשים שלנו נפגוש מלאכה ונצלול אל תוך תהליך של מספר מפגשים, כאשר בסופו נפגוש תוצר בעל ערך וחומר גולמי שעבר בין כפות ידינו מסע שלם שרקם בו חיים.</p>
+          <p>מחכה להיפגש, וסקרנית לצאת למסע משותף יחד עם שותפות.ים לדרך.</p>
+          <div class="facilitator">
+            <div class="avatar"><img src="images/michal.jpg" alt="מיכל מרקס" /></div>
+            <div><div class="fname">מיכל מרקס</div><div class="fpending">יוצרת מלאכה · "פרי כפיים"</div></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="journey-strip">🎨 <strong>רב־תחומיות:</strong> הקבוצות לא נשארות בהכרח בתחום יצירה יחיד — בהתאם למוכנות המשתתפים ולדינמיקה הקבוצתית, מתנסים לעיתים בשילובים יצירתיים בין התחומים השונים (למשל וידאו ומלאכה, כתיבה ותנועה). <a href="https://youtu.be/QQjG427jwA8" target="_blank" rel="noopener">דוגמה — חיבור בין תנועה לכתיבה ←</a></p>
+      <p class="journey-strip">🌿 <strong>המסע שלנו:</strong> במחזור הראשון פעלו קבוצות כתיבה, מחול, מקהלה ותאטרון; במחזור השני — קבוצת תנועה וקבוצת כתיבה. בכל מחזור מתגבשות מחדש הקבוצות שמתאימות לצוות המנחים ולקהילה.</p>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,28 C240,54 480,2 720,26 C960,50 1200,8 1440,28 L1440,60 L0,60 Z" fill="var(--surface)"/></svg>
+  </div>
+
+  <section class="founder">
+    <div class="wrap">
+      <p class="eyebrow">מי מלווה את התהליך</p>
+      <h2>יזם, מנחה, מלווה אמנותי ונפשי</h2>
+      <div class="founder-grid">
+        <div class="founder-card">
+          <div class="avatar">י.ש</div>
+          <div>
+            <h3>יהונתן שטרן־נוביצקי (יויו) — מייסד ומנחה</h3>
+            <p>פסיכולוג קליני בהתמחות, מוזיקאי, אמן ומפיק, מטפל באמנות ומנחה קבוצות — ומלווה תהליכי יצירה לתושבי העוטף והצפון, בערבה, באילת ובתל אביב.</p>
+            <p class="project-highlight">🎵 יזם את הפרויקט <strong>"כולם חוץ ממי שחסר"</strong> — אלבום שחיבר טקסטים של מפונים למוזיקאים, וזכה לסיקור תקשורתי נרחב.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,30 C240,6 480,52 720,30 C960,8 1200,46 1440,26 L1440,60 L0,60 Z" fill="var(--cream-2)"/></svg>
+  </div>
+
+  <section class="voices">
+    <div class="wrap">
+      <p class="eyebrow">מה אומרים המשתתפים</p>
+      <h2>קולות ממחזורים קודמים</h2>
+      <div class="quote-grid">
+        <blockquote><p>"הגיע אלינו יויו והמפגש היה מרפא. מלא דמעות ומילים שנכתבו. בסוף המפגש חשנו כי המפגש הזה תרם לנו ככלי ריפוי הנוגע ללא פחד ובהמון חמלה בפצעים החשופים שלנו."</p><cite>— מירית, 43</cite></blockquote>
+        <blockquote><p>"תודה לניר בן גל שהיה בקשב וברגישות אלינו. במפגש התנועה יכולתי לפגוש את עצמי לעומק ומעבר למילים, לעבד את זה עם הקבוצה ולהיות בפעולה."</p><cite>— משתתפת, מחזור 2</cite></blockquote>
+        <blockquote><p>"מקום של בריחה, ניתוק וחיזוק. חוויה מרגשת ועוצמתית שמחליפה מיליון שיחות מתישות. הרגשנו שאנחנו בבית של אשכול — זה מה שחיבר אותנו חזרה למקום."</p><cite>— משתתפת, מחזור 1</cite></blockquote>
+      </div>
+      <p class="video-note">🎬 <a href="https://www.youtube.com/watch?v=Jd_K_Eb4HsI" target="_blank" rel="noopener">טעימה מחממה 2 (מחזור השני) בוידאו ←</a></p>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,32 C240,60 480,4 720,24 C960,44 1200,10 1440,30 L1440,60 L0,60 Z" fill="var(--surface)"/></svg>
+  </div>
+
+  <section class="partner">
+    <div class="wrap">
+      <div class="partner-inner">
+        <div>
+          <p class="eyebrow">בשיתוף</p>
+          <h3 style="font-size:1.2rem;">מרכז חוסן אשכול</h3>
+          <p>חממות יצירה פועלות בשיתוף מרכז חוסן אשכול והעמותה לקידום תושבי חבל אשכול — כחלק ממארג התמיכה הקהילתית לתושבי האזור.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="cta">
+    <div class="wrap">
+      <h2>מוזמנים ומוזמנות להצטרף</h2>
+      <p>תושבי אשכול מוזמנים להירשם למחזור השלישי של חממות יצירה. מספר המקומות מוגבל בכל קבוצה. עלות: 280 ₪ ל-16 מפגשים, בהתחייבות להגעה רציפה.</p>
+      <button type="button" class="btn" data-open-reg>למילוי פרטי הרשמה</button>
+      <p class="note">לאחר אישור ישלח קישור לתשלום.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="brand-row"><span class="brand-name" style="font-size:.95rem;">חממות יצירה · בשיתוף מרכז חוסן אשכול</span></div>
+      <div>© 2026 חממות יצירה</div>
+    </div>
+  </footer>
+
+  <dialog id="reg-dialog" class="reg-dialog">
+    <div class="reg-dialog-inner">
+      <button type="button" class="reg-close" id="reg-close" aria-label="סגירה">✕</button>
+      <h3>הרשמה למחזור השלישי</h3>
+      <p class="sub">עלות ההשתתפות: <strong>280 ₪</strong> ל-16 מפגשים. ההרשמה מהווה התחייבות להגעה רציפה לכל המפגשים. לאחר אישור ההרשמה יישלח קישור להסדרת התשלום, שישמור את המקום בקבוצה.</p>
+      <form id="reg-form">
+        <div id="reg-fields">
+          <div class="field">
+            <label for="reg-name">שם מלא</label>
+            <input type="text" id="reg-name" name="name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="reg-phone">טלפון</label>
+            <input type="tel" id="reg-phone" name="phone" required autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="reg-email">אימייל</label>
+            <input type="email" id="reg-email" name="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label>איזו קבוצה מעניינת אתכם?</label>
+            <div class="track-options">
+              <label class="track-option">
+                <input type="radio" name="track" value="מסע יצירה קולנועי עם מיכה אמיתי" required>
+                <span>מסע קולנוע תיעודי (iDoco) עם מיכה אמיתי</span>
+              </label>
+              <label class="track-option">
+                <input type="radio" name="track" value="מלאכות קדומות עם מיכל מרקס">
+                <span>מלאכות מסורתיות עם מיכל מרקס</span>
+              </label>
+            </div>
+          </div>
+          <div class="field">
+            <label for="reg-notes">הערות / מידע רפואי (רשות)</label>
+            <textarea id="reg-notes" name="notes"></textarea>
+          </div>
+          <p id="reg-error" class="reg-privacy" style="color:#c0392b;font-weight:700;" hidden>נא למלא שם, טלפון, אימייל ולבחור קבוצה</p>
+          <div class="reg-actions">
+            <button type="button" class="btn" id="reg-submit">✅ אישור הרשמה</button>
+          </div>
+          <p class="reg-privacy">הפרטים נרשמים בגיליון מעקב — לא נשמרים באתר עצמו.</p>
+        </div>
+        <div id="reg-success" hidden style="text-align:center;padding:1rem 0;">
+          <p style="font-size:2rem;margin:0 0 .5rem;">🌱</p>
+          <h3 style="margin-bottom:.5rem;">ההרשמה נקלטה!</h3>
+          <p style="color:var(--plum-soft);font-size:.94rem;">נחזור אליכם בהקדם עם אישור וקישור להסדרת התשלום שישמור את המקום.</p>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none" aria-hidden="true" title="הגשה"></iframe>
+
+  <script>
+  (function(){
+    var dialog = document.getElementById('reg-dialog');
+
+    var SHEET_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSdfuaShG058UDTVe1DApoCvGZyg6EavwetPzfJA_TREDh5PAA/formResponse';
+    var SHEET_FIELDS = {
+      name: 'entry.2005425153',
+      phone: 'entry.2142818315',
+      email: 'entry.305672933',
+      track: 'entry.717423280',
+      notes: 'entry.1911040698'
+    };
+
+    function submitToSheet(values){
+      try{
+        var formEl = document.createElement('form');
+        formEl.action = SHEET_FORM_ACTION;
+        formEl.method = 'POST';
+        formEl.target = 'hidden_iframe';
+        formEl.style.display = 'none';
+        Object.keys(SHEET_FIELDS).forEach(function(key){
+          var input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = SHEET_FIELDS[key];
+          input.value = values[key] || '';
+          formEl.appendChild(input);
+        });
+        document.body.appendChild(formEl);
+        formEl.submit();
+        setTimeout(function(){ formEl.remove(); }, 3000);
+      }catch(err){ /* success view still shown regardless */ }
+    }
+
+    document.querySelectorAll('[data-open-reg]').forEach(function(btn){
+      btn.addEventListener('click', function(){ dialog.showModal(); });
+    });
+    document.getElementById('reg-close').addEventListener('click', function(){ dialog.close(); });
+    dialog.addEventListener('click', function(e){ if(e.target === dialog) dialog.close(); });
+    document.getElementById('reg-form').addEventListener('submit', function(e){ e.preventDefault(); });
+
+    function getFieldValues(){
+      var trackEl = document.querySelector('input[name="track"]:checked');
+      return {
+        name: document.getElementById('reg-name').value.trim(),
+        phone: document.getElementById('reg-phone').value.trim(),
+        email: document.getElementById('reg-email').value.trim(),
+        track: trackEl ? trackEl.value : '',
+        notes: document.getElementById('reg-notes').value.trim()
+      };
+    }
+
+    function validate(){
+      var name = document.getElementById('reg-name');
+      var phone = document.getElementById('reg-phone');
+      var email = document.getElementById('reg-email');
+      var track = document.querySelector('input[name="track"]:checked');
+      var errorEl = document.getElementById('reg-error');
+      if(!name.value.trim() || !phone.value.trim() || !email.value.trim() || !track){
+        errorEl.hidden = false;
+        return false;
+      }
+      errorEl.hidden = true;
+      return true;
+    }
+
+    document.getElementById('reg-submit').addEventListener('click', function(){
+      if(!validate()) return;
+      var values = getFieldValues();
+      submitToSheet(values);
+      document.getElementById('reg-fields').hidden = true;
+      document.getElementById('reg-success').hidden = false;
+    });
+
+    dialog.addEventListener('close', function(){
+      setTimeout(function(){
+        document.getElementById('reg-form').reset();
+        document.getElementById('reg-fields').hidden = false;
+        document.getElementById('reg-success').hidden = true;
+      }, 300);
+    });
+  })();
+  </script>
+
+</div>
+</body>
+</html>

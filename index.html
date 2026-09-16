@@ -66,22 +66,19 @@
     position:relative;
     z-index:1;
   }
-  .hero-logo{width:min(340px,88vw);height:auto;margin:0 auto;}
-  .hero-brand-row{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap;}
-  .hero-brand-row .hero-logo{width:min(260px,68vw);margin:0;}
-  .hero-brand-row .hero-partner-logo{width:min(130px,38vw);height:auto;}
   .footer-logos{display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;margin-bottom:1rem;}
   .footer-logos img{height:52px;width:auto;}
   .brand-row{display:flex;align-items:center;gap:.75rem;justify-content:center;}
   .brand-row .brand-name{font-family:"Frank Ruhl Libre",serif;font-size:1.05rem;color:var(--plum);font-weight:600;}
   .cycle-pill{
-    display:inline-flex;align-items:center;gap:.4rem;
+    display:flex;flex-direction:column;align-items:center;gap:.3rem;
     background:var(--cream-2);border:none;
-    border-radius:999px;padding:.35rem .9rem;
-    font-size:.8rem;color:var(--plum-soft);width:fit-content;
-    margin-inline:auto;
+    border-radius:20px;padding:.9rem 1.25rem;
+    width:fit-content;margin-inline:auto;
   }
-  .cycle-pill b{color:var(--coral-deep);}
+  .cycle-pill .cp-line1{font-size:clamp(.78rem,3.6vw,.88rem);color:var(--plum-soft);white-space:nowrap;}
+  .cycle-pill .cp-line2{font-size:clamp(1.05rem,4.6vw,1.25rem);font-weight:800;color:var(--coral-deep);}
+  .cycle-pill .cp-line3{font-size:clamp(.85rem,3.8vw,.95rem);color:var(--plum-soft);}
   .quick-tracks{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;}
   .quick-track-btn{
     display:inline-flex;align-items:center;gap:.4rem;
@@ -361,7 +358,6 @@
   @media (min-width:768px){
     section{padding-block:4.5rem;}
     .hero{padding-block-start:3.5rem;padding-block-end:4.5rem;}
-    .hero-logo{width:380px;}
     .principles{grid-template-columns:1fr 1fr;}
     .tracks{grid-template-columns:1fr 1fr;}
     .founder-grid{flex-direction:row;}
@@ -376,11 +372,11 @@
 
   <header class="hero">
     <div class="wrap">
-      <div class="hero-brand-row">
-        <img id="hero-logo" class="hero-logo" alt="חממות יצירה — הבעה, ריפוי, קהילה" src="images/logo.png" />
-        <img class="hero-partner-logo" alt="מרכז חוסן אשכול" src="images/eshkol-logo.png" />
-      </div>
-      <span class="cycle-pill">אנו שמחים לבשר שחממות יצירה <b>המחזור השלישי</b> יוצא לדרך!</span>
+      <p class="cycle-pill">
+        <span class="cp-line1">אנו שמחים לבשר שחממות יצירה</span>
+        <span class="cp-line2">המחזור השלישי</span>
+        <span class="cp-line3">יוצא לדרך!</span>
+      </p>
       <div class="quick-tracks">
         <a class="quick-track-btn" href="#track-video">🎬 חממת מסע קולנוע תיעודי</a>
         <a class="quick-track-btn" href="#track-crafts">🧺 חממת מלאכות מסורתיות</a>

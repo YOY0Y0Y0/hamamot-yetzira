@@ -606,6 +606,10 @@
   (function(){
     var dialog = document.getElementById('reg-dialog');
 
+    if (location.hash === '#reg') {
+      dialog.showModal();
+    }
+
     var SHEET_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSdfuaShG058UDTVe1DApoCvGZyg6EavwetPzfJA_TREDh5PAA/formResponse';
     var SHEET_FIELDS = {
       name: 'entry.2005425153',

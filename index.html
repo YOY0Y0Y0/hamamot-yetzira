@@ -67,7 +67,12 @@
     z-index:1;
   }
   .hero-logo{width:min(340px,88vw);height:auto;margin:0 auto;}
+  .hero-brand-row{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap;}
+  .hero-brand-row .hero-logo{width:min(260px,68vw);margin:0;}
+  .hero-brand-row .hero-partner-logo{width:min(130px,38vw);height:auto;}
   .partner-logo{width:min(180px,50vw);height:auto;align-self:center;}
+  .footer-logos{display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;margin-bottom:1rem;}
+  .footer-logos img{height:52px;width:auto;}
   .brand-row{display:flex;align-items:center;gap:.75rem;justify-content:center;}
   .brand-row .brand-name{font-family:"Frank Ruhl Libre",serif;font-size:1.05rem;color:var(--plum);font-weight:600;}
   .cycle-pill{
@@ -382,7 +387,10 @@
 
   <header class="hero">
     <div class="wrap">
-      <img id="hero-logo" class="hero-logo" alt="חממות יצירה — הבעה, ריפוי, קהילה" src="images/logo.png" />
+      <div class="hero-brand-row">
+        <img id="hero-logo" class="hero-logo" alt="חממות יצירה — הבעה, ריפוי, קהילה" src="images/logo.png" />
+        <img class="hero-partner-logo" alt="מרכז חוסן אשכול" src="images/eshkol-logo.png" />
+      </div>
       <span class="cycle-pill">אנו שמחים לבשר שחממות יצירה <b>המחזור השלישי</b> יוצא לדרך!</span>
       <div class="quick-tracks">
         <a class="quick-track-btn" href="#track-video">🎬 חממת מסע קולנוע תיעודי</a>
@@ -394,7 +402,7 @@
         <li>🗓️ <strong>16</strong> מפגשים</li>
         <li>📍 מרכז יובלי הבשור</li>
         <li>🕕 שלישי, <strong>18:00–19:30</strong></li>
-        <li>🚀 יוצא לדרך <strong>6.10</strong></li>
+        <li>🚀 יוצא לדרך <strong>20.10</strong></li>
         <li>💳 <strong>280 ₪</strong> ל-16 מפגשים</li>
       </ul>
       <div class="cta-row">
@@ -435,7 +443,7 @@
         <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
         <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
       </ul>
-      <p class="timeline-caption">6.10.26 ⟵ עונה של 16 מפגשים שבועיים ⟶ 26.1.27 (אפשרות הארכה ל־20 מפגשים)</p>
+      <p class="timeline-caption">20.10.26 ⟵ עונה של 16 מפגשים שבועיים ⟶ 26.1.27 (אפשרות הארכה ל־20 מפגשים)</p>
       <p class="journey-strip" style="margin-top:0;margin-bottom:2rem;">💳 <strong>עלות ההשתתפות: 280 ₪ ל-16 המפגשים.</strong> ההרשמה מהווה התחייבות להגעה רציפה לכל המפגשים. לאחר אישור ההרשמה יישלח קישור להסדרת התשלום, שישמור את המקום בקבוצה.</p>
 
       <div class="tracks">
@@ -457,7 +465,7 @@
           <h3>מלאכות מסורתיות</h3>
           <p>מתרגשת להתחבר אל מיזם חממות באשכול ולפתוח קבוצת מלאכה מסורתית. שמי מיכל מרקס, אני יוצרת, חוקרת, חיה ונושמת מלאכה ואמנות ואת החיבור שלה לחיים שלנו כאן בהקשרים התפתחותיים והוליסטיים, ובעלת הסטודיו <strong>פרי כפיים</strong> למלאכה מסורתית מחברת 🪢.</p>
           <p>♡ מחכה להיפגש איתכן ואיתכם, לזמן משותף שבו ניצור ונפגוש את עצמנו דרך המלאכה — החומרים, טכניקות המלאכה השונות, האיכויות שכל חומר ומלאכה מביאים איתם מאפשרים ומזמינים אותנו לחוות מפגשים עם חלקים בתוכנו שאולי לא הכרנו, ומבקשים הכרה וממלאים בתוכנו צרכים אנושיים כה מהותיים כמו מסוגלות, יצירה ויצירתיות, למידה והתחדשות — וכל זה יחד בתוך מרחב של קבוצת אנשים תומכת ומיטיבה.</p>
-          <p>♡ נפגוש מלאכות כמו ליבוד, קליעה, אריגה ועוד, בתכנית שמתפרסת על פני 16 מפגשים שבועיים, בימי שלישי בין השעות 18:00–19:30. במפגשים שלנו נפגוש מלאכה ונצלול אל תוך תהליך של מספר מפגשים, כאשר בסופו נפגוש תוצר בעל ערך וחומר גולמי שעבר בין כפות ידינו מסע שלם שרקם בו חיים.</p>
+          <p>במפגשים שלנו נפגוש מלאכות כמו ליבוד, קליעה, אריגה ועוד ונצלול אל תוך תהליך כאשר בסופו נפגוש תוצר בעל ערך וחומר גולמי שעבר בין כפות ידינו מסע שלם שרקם בו חיים.</p>
           <p>מחכה להיפגש, וסקרנית לצאת למסע משותף יחד עם שותפות.ים לדרך.</p>
           <div class="facilitator">
             <div class="avatar"><img src="images/michal.jpg" alt="מיכל מרקס" /></div>
@@ -538,6 +546,10 @@
 
   <footer>
     <div class="wrap">
+      <div class="footer-logos">
+        <img src="images/logo.png" alt="חממות יצירה" />
+        <img src="images/eshkol-logo.png" alt="מרכז חוסן אשכול" />
+      </div>
       <div class="brand-row"><span class="brand-name" style="font-size:.95rem;">חממות יצירה · בשיתוף מרכז חוסן אשכול</span></div>
       <div>© 2026 חממות יצירה</div>
     </div>

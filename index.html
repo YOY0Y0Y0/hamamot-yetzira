@@ -70,7 +70,6 @@
   .hero-brand-row{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap;}
   .hero-brand-row .hero-logo{width:min(260px,68vw);margin:0;}
   .hero-brand-row .hero-partner-logo{width:min(130px,38vw);height:auto;}
-  .partner-logo{width:min(180px,50vw);height:auto;align-self:center;}
   .footer-logos{display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;margin-bottom:1rem;}
   .footer-logos img{height:52px;width:auto;}
   .brand-row{display:flex;align-items:center;gap:.75rem;justify-content:center;}
@@ -301,17 +300,6 @@
   }
   .video-note a{font-weight:700;}
 
-  /* ---------- partner ---------- */
-  .partner{background:var(--surface);}
-  .partner-inner{
-    display:flex;flex-direction:column;gap:1rem;
-    background:var(--cream);
-    border:1px solid var(--border);
-    border-radius:20px;
-    padding:1.75rem;
-  }
-  .partner-inner p{color:var(--plum-soft);font-size:.96rem;max-width:34rem;}
-
   /* ---------- CTA ---------- */
   .cta{
     background:linear-gradient(180deg,var(--cream-2) 0%,var(--peach) 100%);
@@ -374,13 +362,11 @@
     section{padding-block:4.5rem;}
     .hero{padding-block-start:3.5rem;padding-block-end:4.5rem;}
     .hero-logo{width:380px;}
-    .partner-logo{width:200px;}
     .principles{grid-template-columns:1fr 1fr;}
     .tracks{grid-template-columns:1fr 1fr;}
     .founder-grid{flex-direction:row;}
     .quote-grid{grid-template-columns:1fr 1fr;}
     .quote-grid blockquote:first-child{grid-column:1 / -1;}
-    .partner-inner{flex-direction:row;align-items:center;justify-content:space-between;}
   }
 </style>
 </head>
@@ -534,27 +520,6 @@
         <blockquote><p>"מקום של בריחה, ניתוק וחיזוק. חוויה מרגשת ועוצמתית שמחליפה מיליון שיחות מתישות. הרגשנו שאנחנו בבית של אשכול — זה מה שחיבר אותנו חזרה למקום."</p><cite>— משתתפת, מחזור 1</cite></blockquote>
       </div>
       <p class="video-note">🎬 <a href="https://www.youtube.com/watch?v=Jd_K_Eb4HsI" target="_blank" rel="noopener">טעימה מחממה 2 (מחזור השני) בוידאו ←</a></p>
-    </div>
-  </section>
-
-  <div class="divider" aria-hidden="true">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,32 C240,60 480,4 720,24 C960,44 1200,10 1440,30 L1440,60 L0,60 Z" fill="var(--surface)"/></svg>
-  </div>
-
-  <div class="signup-strip bg-surface">
-    <button type="button" class="btn" data-open-reg>🌱 להצטרפות למחזור השלישי</button>
-  </div>
-
-  <section class="partner">
-    <div class="wrap">
-      <div class="partner-inner">
-        <div>
-          <p class="eyebrow">בשיתוף</p>
-          <h3 style="font-size:1.2rem;">מרכז חוסן אשכול</h3>
-          <p>חממות יצירה פועלות בשיתוף מרכז חוסן אשכול והעמותה לקידום תושבי חבל אשכול — כחלק ממארג התמיכה הקהילתית לתושבי האזור.</p>
-        </div>
-        <img class="partner-logo" alt="מרכז חוסן אשכול" src="images/eshkol-logo.png" />
-      </div>
     </div>
   </section>
 
